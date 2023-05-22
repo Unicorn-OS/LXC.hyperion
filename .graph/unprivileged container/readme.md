@@ -3,6 +3,7 @@ sch: https://www.google.com/search?q=lxc+unprivileged+containers
 # wiki:
 - https://wiki.gentoo.org/wiki/User:Doskanoness/Unprivileged_LXC_containers
 - https://wiki.gentoo.org/wiki/Subuid_subgid
+- https://github.com/lxc/lxc#unprivileged-containers
 
 # Guide
 - https://brauner.io/2018/02/28/lxc-includes-cgroup-pam-module.html
