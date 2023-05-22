@@ -12,3 +12,12 @@
     pkg:
     - libpam-cgfs
   become: true
+
+- name: Armbian
+  include_tasks: "Fix: Armbian"
+  when: is_Armbian
+
+
+- name: Optional
+  include_tasks: optional
+  when: optional_pkgs

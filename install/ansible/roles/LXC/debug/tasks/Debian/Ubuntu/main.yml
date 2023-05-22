@@ -1,0 +1,8 @@
+---
+# https://linuxcontainers.org/lxc/getting-started/
+
+- name: Strace
+  ansible.builtin.apt:
+    pkg:
+    - strace
+  become: true

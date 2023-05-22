@@ -1,5 +1,8 @@
 ---
-- hosts: sbc #local, fedora, ubuntu  
+- hosts: sbc #local, fedora, ubuntu
+  vars:
+    is_Armbian: true
 
   roles:
   - LXC
+  - LXC/debug
