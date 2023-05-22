@@ -5,4 +5,7 @@ test: `lxc-checkconfig | grep "Cgroup v1 systemd"`
 
 result: `Cgroup v1 systemd controller: missing`
 
+# Bug:
+- https://github.com/lxc/lxc/issues/3302
+
 # Solution:
