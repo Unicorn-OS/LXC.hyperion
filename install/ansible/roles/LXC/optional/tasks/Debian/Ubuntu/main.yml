@@ -1,0 +1,13 @@
+---
+# https://linuxcontainers.org/lxc/getting-started/
+- name: Recommended libraries
+  ansible.builtin.apt:
+    pkg:
+    - libcap2
+    - libapparmor1
+    - libselinux1
+    - libseccomp2
+    - libgnutls30
+    # - liblua5.4-0
+    - python3-dev
+  become: true
