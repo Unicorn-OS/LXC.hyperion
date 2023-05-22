@@ -1,2 +1,0 @@
->newuidmap is not setuid that would explain the failures you're seeing. Which version of shadow are you using. I've seen an issue with shadow 4.4 before. (@hallyn)
->—https://github.com/lxc/lxc/issues/1454#issuecomment-286226662
