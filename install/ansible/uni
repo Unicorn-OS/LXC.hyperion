@@ -1,0 +1,5 @@
+---
+- hosts: sbc #local, fedora, ubuntu  
+
+  roles:
+  - LXC

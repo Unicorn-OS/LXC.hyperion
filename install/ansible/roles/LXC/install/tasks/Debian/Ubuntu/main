@@ -1,0 +1,14 @@
+---
+- name: Install LXC & templates
+  ansible.builtin.apt:
+    pkg:
+    - lxc
+    - lxc-templates
+  become: true
+
+
+- name: Unpriveledged containers
+  ansible.builtin.apt:
+    pkg:
+    - libpam-cgfs
+  become: true

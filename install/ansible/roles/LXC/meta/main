@@ -1,0 +1,4 @@
+---
+dependencies:
+- LXC/install
+- LXC/config
