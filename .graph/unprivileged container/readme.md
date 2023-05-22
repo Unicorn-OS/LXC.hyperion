@@ -1,5 +1,9 @@
 sch: https://www.google.com/search?q=lxc+unprivileged+containers
 
+# wiki:
+- https://wiki.gentoo.org/wiki/User:Doskanoness/Unprivileged_LXC_containers
+- https://wiki.gentoo.org/wiki/Subuid_subgid
+
 # Guide
 - https://brauner.io/2018/02/28/lxc-includes-cgroup-pam-module.html
 
@@ -19,5 +23,3 @@ https://discuss.linuxcontainers.org/t/lxc-opensuse-unprivileged-container/3667/4
 >
 >from https://github.com/lxc/lxc/issues/1998 9
 —https://discuss.linuxcontainers.org/t/lxc-opensuse-unprivileged-container/3667/5
-
-# wiki:
