@@ -12,6 +12,9 @@ Top Tier:
 community:
 - https://www.freecodecamp.org/news/linux-containers-lxc-lxd/
 
+# Whitepaper
+https://opensource.com/downloads/containers-primer
+
 # Comparison:
 ## vs. Docker
 https://earthly.dev/blog/lxc-vs-docker/
