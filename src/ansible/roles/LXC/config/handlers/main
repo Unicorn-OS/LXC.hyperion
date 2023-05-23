@@ -1,4 +1,5 @@
 ---
 
-- name: Reboot node
+- name: Reboot
   ansible.builtin.reboot:
+  become: true

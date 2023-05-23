@@ -8,7 +8,7 @@
     line: "seth veth {{lxc_network_interface}} 24"
     create: true
   become: true
-  notify: Reboot node
+  notify: Reboot
 
 - name: LXC config
   ansible.builtin.copy:
@@ -16,7 +16,7 @@
     dest: "/home/{{ansible_user}}/.config/lxc/"
     remote_src: yes
     force: false
-  notify: Reboot node
+  notify: Reboot
 
 - name: UID
   ansible.builtin.lineinfile:
@@ -24,7 +24,7 @@
     regexp: "lxc.idmap = u"
     line: "lxc.idmap = u 0 100000 65536"
     create: true
-  notify: Reboot node
+  notify: Reboot
 
 - name: GID
   ansible.builtin.lineinfile:
@@ -32,4 +32,4 @@
     regexp: "lxc.idmap = g"
     line: "lxc.idmap = g 0 100000 65536"
     create: true
-  notify: Reboot node
+  notify: Reboot
