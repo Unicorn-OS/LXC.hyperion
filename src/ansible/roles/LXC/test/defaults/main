@@ -1,3 +1,4 @@
 ---
 test_distro: alpine
 test_version: edge
+test_arch: arm64
