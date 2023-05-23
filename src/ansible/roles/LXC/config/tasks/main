@@ -1,4 +1,35 @@
 ---
+# https://www.redhat.com/sysadmin/exploring-containers-lxc
 
-- debug:
-    msg: "Configure LXC!"
+- name: Virtual network interface
+  ansible.builtin.lineinfile:
+    path: /etc/lxc/lxc-usernet
+    regexp: 'seth veth'
+    line: "seth veth {{lxc_network_interface}} 24"
+    create: true
+  become: true
+  notify: Reboot node
+
+- name: LXC config
+  ansible.builtin.copy:
+    src: /etc/lxc/default.conf
+    dest: "/home/{{ansible_user}}/.config/lxc/"
+    remote_src: yes
+    force: false
+  notify: Reboot node
+
+- name: UID
+  ansible.builtin.lineinfile:
+    path: "/home/{{ansible_user}}/.config/lxc/default.conf"
+    regexp: "lxc.idmap = u"
+    line: "lxc.idmap = u 0 100000 65536"
+    create: true
+  notify: Reboot node
+
+- name: GID
+  ansible.builtin.lineinfile:
+    path: "/home/{{ansible_user}}/.config/lxc/default.conf"
+    regexp: "lxc.idmap = g"
+    line: "lxc.idmap = g 0 100000 65536"
+    create: true
+  notify: Reboot node

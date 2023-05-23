@@ -13,9 +13,14 @@
     - libpam-cgfs
   become: true
 
+- name: is Armbian?
+  stat:
+    path: /etc/apt/sources.list.d/armbian.list
+  register: is_armbian
+
 - name: Armbian
-  include_tasks: "Fix: Armbian"
-  when: is_Armbian
+  include_tasks: "{{role_path}}/tasks/Armbian/main"
+  when: is_armbian.stat.exists
 
 
 - name: Optional
