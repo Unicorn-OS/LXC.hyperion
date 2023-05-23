@@ -1,0 +1,2 @@
+dmesg:
+`audit: type=1400 audit(1684841533.392:3): apparmor="DENIED" operation="change_profile" info="label not found" error=-2 profile="unconfined" name="lxc-container-default-cgns" pid=3192 comm="lxc-start`
